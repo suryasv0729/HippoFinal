@@ -9,11 +9,15 @@ body {
 
 .main {
   display: flex;
-  height: 100vh;
 }
 
 .navcard {
   width: 100%;
+  flex: 1;
+  margin-left: 0;
+  padding: 60px;
+  padding-top: 100px;
+  overflow-y: auto;
 }
 
 nav {
@@ -23,8 +27,11 @@ nav {
   justify-content: space-between;
   height: 62px;
   box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
-  position: sticky;
+
+  padding: 10px;
+  position: fixed;
   top: 0;
+  width: 100%;
   z-index: 1000;
 }
 h2 {
@@ -35,20 +42,24 @@ h2 {
 .btns {
   display: flex;
   align-items: center;
-  margin-right: 30px;
+  margin-right: 80px;
   gap: 30px;
 }
 
 .side_nav {
   background-color: black;
-  height: 100vh;
-  width: 62px;
   display: flex;
   flex-direction: column;
-  padding-bottom: 30px;
-  align-items: center;
   justify-content: space-between;
-  position: sticky;
+  height: 100vh;
+  width: 62px;
+  color: white;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+  z-index: 1001;
 }
 
 .side-nav-active {
@@ -82,7 +93,6 @@ h2 {
   margin-top: 50px;
   margin-left: 60px;
   height: 500px;
-  overflow-y: auto;
 }
 
 .feather-svg {
@@ -91,83 +101,9 @@ h2 {
 
   margin: 20px 0 20px 0;
 }
-
-/* HAMBURGER MENU */
-.three {
-  display: none;
+.feather-svg {
+  margin-top: -6px;
 }
-
-.hamburger {
-  display: none;
-}
-
-.col {
-  display: block;
-  float: left;
-  margin: 1% 0 1% 1.6%;
-}
-
-.col:first-of-type {
-  margin-left: 0;
-}
-
-/* CLEARFIX */
-
-.cf:before,
-.cf:after {
-  content: " ";
-  display: table;
-}
-
-.cf:after {
-  clear: both;
-}
-
-/* ALL */
-
-.row .three {
-  padding: 60px 10px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background-color: #2c3e50;
-  color: #ecf0f1;
-  text-align: center;
-}
-
-.hamburger .line {
-  width: 23px;
-  height: 2px;
-  background-color: #ecf0f1;
-  display: block;
-  margin: 8px auto;
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.hamburger:hover {
-  cursor: pointer;
-}
-
-.hamburger.is-active .line:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.is-active .line:nth-child(1) {
-  -webkit-transform: translateY(13px) rotate(45deg);
-  -ms-transform: translateY(13px) rotate(45deg);
-  -o-transform: translateY(13px) rotate(45deg);
-  transform: translateY(13px) rotate(45deg);
-}
-
-.hamburger.is-active .line:nth-child(3) {
-  -webkit-transform: translateY(-13px) rotate(-45deg);
-  -ms-transform: translateY(-13px) rotate(-45deg);
-  -o-transform: translateY(-13px) rotate(-45deg);
-  transform: translateY(-13px) rotate(-45deg);
-}
-
 .intro {
   display: flex;
   align-items: center;
@@ -431,87 +367,62 @@ img {
   display: none;
 }
 
-/* sec2 */
-
-.items2-img {
-  height: 350px;
-  width: 500px;
-  margin-top: -20px;
+.hamburger-menu {
+  display: none;
 }
 
-.vid-opt {
-  display: flex;
-  gap: 40px;
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 24px;
+  margin-right: 20px;
+}
+
+.hamburger-menu .bar {
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin-top: 10px;
-  height: 100px;
-}
-.opt-btn {
-  margin-left: 38px;
-}
-
-.vid-components {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  row-gap: 10px;
-  margin-top: 18px;
-  margin-bottom: 18px;
-}
-.vid-components div {
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  height: 30px;
-  width: 150px;
-
-  padding-left: 18px;
-  padding-top: 18px;
-  padding-bottom: 18px;
-  border-radius: 15px;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  background-color: #333333e7;
+  color: #fff;
+  z-index: 999;
 }
 
-.stats1 {
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  border-radius: 8px;
-}
+.mobile-menu a {
+  padding: 10px;
+  text-decoration: none;
 
-.vid-stats div {
-  display: flex;
-  gap: 30px;
-  row-gap: 10px;
-  margin-top: 18px;
-  margin-bottom: 18px;
-  margin-left: 10px;
-  font-size: 14px;
+  color: #4080f0;
 }
-
-.opt-btn button {
-  background-color: #000;
-}
-
-.desci {
-  text-wrap: wrap;
-}
-
 /* resposiveness */
 
-@media (max-width: 1280px) {
-  .items {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    row-gap: 30px;
-  }
-  .opt {
-    display: none;
-  }
-}
-
-@media (max-width: 1026px) {
+@media (max-width: 1340px) {
   .card {
     background-color: #f1f1f4;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
       rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    row-gap: 30px;
     border-radius: 8px;
     height: 252px;
     width: 248px;
+  }
+
+  .items {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .vid-time {
@@ -525,6 +436,9 @@ img {
     border-radius: 8px;
     color: #fff;
     font-size: 14px;
+  }
+  .opt {
+    display: none;
   }
 }
 
@@ -583,10 +497,6 @@ img {
   }
 }
 
-.side_nav.open {
-  left: 0;
-}
-
 @media (max-width: 660px) {
   .items {
     display: grid;
@@ -595,11 +505,8 @@ img {
     position: relative;
     margin-right: 40px;
     row-gap: 30px;
-    overflow: auto;
   }
-  .hamburger {
-    display: block;
-  }
+
   .card {
     justify-self: center;
   }
@@ -608,24 +515,22 @@ img {
     justify-content: space-between;
   }
   .side_nav {
-    width: 35px;
-    padding-left: 4px;
-    position: fixed;
-    left: -100%;
-    padding-top: 40px;
   }
   .set {
     display: none;
   }
 
   .feather-svg {
-    display: none;
+    margin-top: -6px;
   }
   .side_nav svg {
-    height: 15px;
+    height: 20px;
   }
-  h2 {
+  .intro {
     display: none;
+  }
+  .btns {
+    margin-left: auto;
   }
 }
 
@@ -636,5 +541,49 @@ img {
   .search-icon {
     height: 30px;
     width: 30px;
+  }
+
+  .side_nav {
+    display: none;
+  }
+  .intro {
+    display: none;
+  }
+  nav {
+    margin-left: -60px;
+  }
+  .btns {
+    margin-left: auto;
+    margin-right: -2px;
+  }
+  .items {
+    margin-left: -28px;
+  }
+  .card {
+    height: 220px;
+    width: 260px;
+  }
+
+  .pdiv p {
+    margin-top: -10px;
+  }
+  .desi {
+    margin-top: -14px;
+  }
+  .vid-time {
+    bottom: 60px;
+  }
+  .items {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+  .opt {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: flex;
+    margin-top: 10px;
   }
 }
