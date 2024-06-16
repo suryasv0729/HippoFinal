@@ -279,6 +279,9 @@ button {
   background-color: #fbfbfb;
   text-align: center;
 }
+.stats {
+  margin-top: 30px;
+}
 
 .stats1 {
   display: flex;
@@ -290,15 +293,16 @@ button {
     rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 
   margin-top: auto;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 8px;
 }
 
 .stats2 {
   display: flex;
   margin-top: 16px;
   justify-content: space-between;
-
+  padding: 8px;
   row-gap: 10px;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
     rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
@@ -752,6 +756,7 @@ button {
     border-radius: 18px;
     padding: 10px 0 10px 0;
     font-size: 12px;
+    font-weight: 500;
   }
   .folders p:first-child,
   .tags p:first-child {
