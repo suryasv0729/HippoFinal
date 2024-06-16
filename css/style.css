@@ -406,7 +406,7 @@ img {
   padding: 10px;
   text-decoration: none;
 
-  color: #4080f0;
+  color: #ffffff;
 }
 /* resposiveness */
 
@@ -557,7 +557,7 @@ img {
     margin-right: -2px;
   }
   .items {
-    margin-left: -28px;
+    margin-left: 10px;
   }
   .card {
     height: 220px;
