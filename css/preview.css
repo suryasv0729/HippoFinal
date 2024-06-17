@@ -95,7 +95,7 @@ h2 {
   height: 100vh;
   width: 62px;
   color: white;
-  padding: 20px;
+  padding: 10px 20px 10px 20px;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -121,8 +121,7 @@ h2 {
   height: 28px;
   width: 28px;
 
-  margin: 20px 0 20px 0;
-  margin-top: -2px;
+  margin: 8px 0 20px 0;
 }
 
 .intro {
@@ -179,12 +178,13 @@ button {
   margin-left: auto;
   margin-right: auto;
   opacity: 0.3;
-
+  margin-top: -14px;
   background-color: #edecec;
 }
 .folder-icon {
   height: 36px;
   width: 26px;
+  margin-top: -12px;
 }
 
 .chat-icon {
@@ -195,12 +195,14 @@ button {
 .plus-icon {
   height: 26px;
   width: 24px;
+  margin-top: -10px;
   transform: rotate(134deg);
 }
 .svg {
   height: 22px;
   width: 22px;
   margin: 24px auto 28px auto;
+  cursor: pointer;
 }
 
 .search-icon {
@@ -282,12 +284,17 @@ button {
 
 .edit-btn {
   margin-left: -35px;
+  cursor: pointer;
 }
 .edit-btn:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .share-btn:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.share-btn {
+  cursor: pointer;
 }
 
 .vid-components {
@@ -312,6 +319,7 @@ button {
   background-color: #fbfbfb;
   text-align: center;
   transition: all 0.3s;
+  cursor: pointer;
 }
 
 .vid-components div:hover {
@@ -507,7 +515,6 @@ button {
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   border-radius: 15px;
-
   height: 40px;
   margin-left: 40px;
   margin-right: 40px;
@@ -516,6 +523,7 @@ button {
   font-size: 18px;
   font-weight: 600;
   padding-top: 10px;
+  cursor: pointer;
 }
 
 .video-setting {
@@ -531,7 +539,7 @@ button {
 .setting {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
   align-items: center;
 }
 
@@ -558,6 +566,12 @@ button {
   transition: all 0.3s;
 }
 .change-vid-setting-btn:hover {
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.view-detail-btn:hover {
   box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
     rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
     rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
