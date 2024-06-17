@@ -1,10 +1,18 @@
+@font-face {
+  font-family: "MyFont";
+  src: url("../Assets/font/Mona-Sans.woff") format("woff"),
+    url("../Assets/font/Mona-Sans.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-  font-family: "Mona Sans";
+  font-family: "Mona-Sans", Arial, sans-serif;
 }
 
 .main {
@@ -102,7 +110,7 @@ h2 {
   margin: 20px 0 20px 0;
 }
 .feather-svg {
-  margin-top: -6px;
+  margin-top: -2px;
 }
 .intro {
   display: flex;
@@ -167,16 +175,7 @@ input {
   width: 30px;
   fill: #fff;
 }
-.plus-icon {
-  height: 24px;
-  width: 27px;
-  transform: rotate(134deg);
-}
 
-.chat-icon {
-  height: 30px;
-  width: 23px;
-}
 .svg {
   height: 22px;
   width: 22px;
@@ -185,16 +184,27 @@ input {
 
 .set {
   height: 1px;
-  width: 24px;
+  width: 18px;
   margin-left: auto;
   margin-right: auto;
-  opacity: 0.5;
-  margin-bottom: 14px;
+  opacity: 0.3;
+
   background-color: #edecec;
 }
 .folder-icon {
+  height: 36px;
+  width: 26px;
+}
+
+.chat-icon {
   height: 30px;
   width: 23px;
+}
+
+.plus-icon {
+  height: 26px;
+  width: 24px;
+  transform: rotate(134deg);
 }
 
 .card {
@@ -406,7 +416,7 @@ img {
   padding: 10px;
   text-decoration: none;
 
-  color: #4080f0;
+  color: #ffffff;
 }
 /* resposiveness */
 
@@ -521,7 +531,7 @@ img {
   }
 
   .feather-svg {
-    margin-top: -6px;
+    margin-top: -2px;
   }
   .side_nav svg {
     height: 20px;

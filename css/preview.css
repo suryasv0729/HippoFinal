@@ -123,6 +123,7 @@ h2 {
   width: 28px;
 
   margin: 20px 0 20px 0;
+  margin-top: -2px;
 }
 
 .intro {
@@ -173,7 +174,30 @@ button {
   width: 40px;
   fill: #fff;
 }
+.set {
+  height: 1px;
+  width: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.3;
 
+  background-color: #edecec;
+}
+.folder-icon {
+  height: 36px;
+  width: 26px;
+}
+
+.chat-icon {
+  height: 30px;
+  width: 23px;
+}
+
+.plus-icon {
+  height: 26px;
+  width: 24px;
+  transform: rotate(134deg);
+}
 .svg {
   height: 22px;
   width: 22px;
@@ -236,8 +260,12 @@ button {
 .opt-btn {
   display: flex;
   gap: 10px;
+  transition: all 0.3s;
 }
-
+.vid-opt > div > p > span {
+  font-size: 10;
+  opacity: 0.5;
+}
 .vid-opt > div > p:first-child {
   font-weight: 700;
 }
@@ -256,6 +284,12 @@ button {
 .edit-btn {
   margin-left: -35px;
 }
+.edit-btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.share-btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
 
 .vid-components {
   display: grid;
@@ -264,6 +298,7 @@ button {
   margin-top: 8px;
   column-gap: 20px;
   font-size: 16px;
+
   row-gap: 10px;
 }
 .vid-components-svg {
@@ -271,14 +306,21 @@ button {
   margin-bottom: -3px;
 }
 .vid-components div {
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
-    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-  border-radius: 15px;
-  padding: 14px 0 14px 0;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 20px;
+  padding: 16px 0 16px 0;
 
   background-color: #fbfbfb;
   text-align: center;
+  transition: all 0.3s;
 }
+
+.vid-components div:hover {
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
 .stats {
   margin-top: 30px;
 }
@@ -514,6 +556,12 @@ button {
   font-size: 18px;
   font-weight: 600;
   padding-top: 10px;
+  transition: all 0.3s;
+}
+.change-vid-setting-btn:hover {
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 
 .anyone-svg {
@@ -772,6 +820,12 @@ button {
 
   .view-detail-btn {
     font-size: 16px;
+  }
+
+  .view-detail-btn:hover {
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+      rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+      rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
   }
   .setting p:first-child {
     font-size: 14px;
